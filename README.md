@@ -1,7 +1,7 @@
 
-## assembly
+## os.assembly
 
-a basic .asm self-learning
+a basic .asm self-learning  
 all of this contribute to OS and bootloader, which is why all files end with the **Magic Number**.
 
 ---
