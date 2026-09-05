@@ -1,0 +1,3 @@
+.asm-lsp.toml
+*.bin
+build
