@@ -1,25 +1,11 @@
-
-MOV AH, 0X0E
-
-MOV BP, 0X8000
-MOV SP, BP
-
-PUSH 'A'
-PUSH 'B'
-PUSH 'C'
-
-POP BX
-MOV AL, BL
-INT 0X10
-
-POP BX
-MOV AL, BL
-INT 0X10
-
-MOV AL, [0X7FFE]
-INT 0X10
-
-JMP $
-
-TIMES 510 - ($ - $$) DB 0
-DW 0XAA55
+; if a function changes registers that the caller
+; expects to remain unchanged, save them before changing them
+; and restore them before returning.
+DEMONSTRATE:
+    PUSHA         ; Push all register values to the stack
+    MOV BX , 10
+    ADD BX , 20
+    MOV AH , 0X0E ; int =10/ ah =0 x0e -> BIOS tele - type output
+    INT 0X10      ; print the character in al
+    POPA          ; Restore original register values
+    RET
