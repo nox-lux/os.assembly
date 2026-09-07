@@ -48,6 +48,9 @@ AL: which character
 ---
 
 ## `stack.asm` (WIP)
+skipping out on fluff: use these as a way to create "restore points".  
+if a register expects values to stay same, but you decide to change it,  
+push it into a stack, push the changes on top, and pop the changes when done.  
 
 ---
 
