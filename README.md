@@ -16,7 +16,8 @@ use the `./run.sh` script and select the file you want to run. **requires QEmu a
 contents:
 1. [`comparison.asm`](#comparisonasm)
 2. [`print.asm`](#printasm)
-3. [`stack.asm`](#stackasm)
+3. [`print_hex.asm`](#printhexasm)
+4. [`stack.asm`](#stackasm)
 
 ---
 
@@ -47,7 +48,13 @@ AL: which character
 
 ---
 
-## `stack.asm` (WIP)
+## `print_hex.asm`
+(not so) simple hex to hex-string converter. assembly lacks a way to type-cast.  
+so content is extracted bit-wise. kind of mind-blowing.
+
+---
+
+## `stack.asm`
 skipping out on fluff: use these as a way to create "restore points".  
 if a register expects values to stay same, but you decide to change it,  
 push it into a stack, push the changes on top, and pop the changes when done.  
