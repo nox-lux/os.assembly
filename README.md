@@ -16,7 +16,7 @@ use the `./run.sh` script and select the file you want to run. **requires QEmu a
 contents:
 1. [`comparison.asm`](#comparisonasm)
 2. [`print.asm`](#printasm)
-3. [`print_hex.asm`](#printhexasm)
+3. [`print_hex.asm`](#print_hexasm)
 4. [`stack.asm`](#stackasm)
 
 ---
